@@ -8,7 +8,7 @@ namespace MovieLibrary
 {
     class Program
     {
-        public static string movies;
+        public static string[] movies = {"Men in black", "Star Wars", "Untouchables"};
 
         public static void start()
         {
@@ -20,8 +20,11 @@ namespace MovieLibrary
             {
                 case "one":
                 case "1":
-                    inputIsOne();
-                    Console.WriteLine(movies);
+                    foreach (string movie in movies)
+                    {
+                        Console.WriteLine("{0}", movies);
+                    }
+                    
                     break;
             }
 
@@ -39,12 +42,12 @@ namespace MovieLibrary
 
         }
 
-        public static string inputIsOne()
-        {
-            movies = "Men In Black";
+        //public static string inputIsOne()
+        //{
+        //    movies = "Men In Black" ;
           
-            return movies;
-        }
+        //    return movies;
+        //}
        
     }
 }
