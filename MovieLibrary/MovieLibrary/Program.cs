@@ -20,11 +20,11 @@ namespace MovieLibrary
             {
                 case "one":
                 case "1":
-                    foreach (string movie in movies)
-                    {
-                        Console.WriteLine("{0}", movies);
-                    }
-                    
+                    Console.WriteLine("{0}, {1}, {2}", movies);
+                    Console.ReadKey();
+                    break;
+                case "quit":
+                case "Quit":
                     break;
             }
 
@@ -35,10 +35,11 @@ namespace MovieLibrary
             Console.WriteLine("Welcome to the movie library.");
             Console.WriteLine();
             Console.WriteLine("Press one to show movies.");
+            Console.WriteLine("Type quit to exit.");
         
             start();
 
-            Console.ReadKey();
+
 
         }
 
