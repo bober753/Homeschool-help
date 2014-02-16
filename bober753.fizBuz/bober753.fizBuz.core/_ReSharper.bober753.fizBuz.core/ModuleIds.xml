@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="1D4AFF57-F334-44C4-9572-D157CFFDBA0C" ModuleId="bober753.fizBuz.core" />
+  <Module PersistentId="9C4DCB43-45DC-4D11-BEA1-B7331A540B0C" ModuleId="bober753.fizBuz.test" />
+  <Module PersistentId="32EF596D-C18E-4013-A16F-F8C12B2C8361" ModuleId="bober753.fizBuz.runner" />
+</Modules>
