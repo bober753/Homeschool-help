@@ -1,54 +1,50 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MovieLibrary
 {
     class Program
     {
-        public static string[] movies = {"Men in black", "Star Wars", "Untouchables"};
+        public string input;
 
-        public static void start()
+        public bool closeTheProgram = false;
+
+        public string[] Movies = {"Men in black", "Star Wars", "Untouchables"};
+
+        public void start()
         {
-            string input = Console.ReadLine();
+            input == Console.ReadLine();
 
             Console.Clear();
-
+            
             switch (input)
             {
                 case "one":
                 case "1":
-                    Console.WriteLine("{0}, {1}, {2}", movies);
-                    Console.ReadKey();
-                    break;
-                case "quit":
-                case "Quit":
-                    break;
+                    {
+                        foreach (string movies in Movies)
+                        {
+                            Console.WriteLine(movies);
+                        }
+                        break;
+                    }
             }
-
         }
 
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the movie library.");
-            Console.WriteLine();
-            Console.WriteLine("Press one to show movies.");
-            Console.WriteLine("Type quit to exit.");
-        
-            start();
+            Console.WriteLine("Welcome to Nathans' movie library");
+            do
+            {
+                Console.WriteLine("Press one to show movies.");
+                Console.WriteLine("Type quit to exit.");
+                
+                start();
 
-
-
+                if(input == "Quit" || input == "quit")
+                {
+                    closeTheProgram = true;
+                }
+            } while (closeTheProgram == false);
         }
-
-        //public static string inputIsOne()
-        //{
-        //    movies = "Men In Black" ;
-          
-        //    return movies;
-        //}
-       
     }
 }
